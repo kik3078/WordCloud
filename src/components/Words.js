@@ -23,7 +23,6 @@ const styles = theme => ({
 
 const databaseURL = "https://word-cloud-a6dc5.firebaseio.com/";
 
-
 class Words extends React.Component {
     constructor() {
         super();
@@ -137,7 +136,7 @@ class Words extends React.Component {
                     <DialogTitle>단어 추가</DialogTitle>
                     <DialogContent>
                         <TextField label="단어" type="Text" name="word" value={this.state.word} onChange={this.handleValueChange} /><br />
-                        <TextField label="가중치" type="Text" name="weight" value={this.state.weight} onChange={this.handleValueChange} /><br />
+                        <TextField label="가중치(1부터 9까지)" type="number" name="weight" value={this.state.weight} onChange={this.handleValueChange} /><br />
                     </DialogContent>
                     <DialogActions>
                         <Button variant="contained" color="primary" onClick={this.handleSubmit}>추가</Button>
